@@ -23,7 +23,7 @@ class CheckLastWikiActivity extends Maintenance {
 	public function getTimestamp(): int {
 		$defaultActor = $this->getServiceContainer()->getUserFactory()
 			->newFromName( 'MediaWiki default' )
-			->getActorId();
+			?->getActorId();
 
 		$dbr = $this->getDB( DB_REPLICA );
 
