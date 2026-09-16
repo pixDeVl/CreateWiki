@@ -63,7 +63,6 @@ class ManageInactiveWikis extends Maintenance {
 		$this->initServices();
 		$dbr = $this->databaseUtils->getGlobalReplicaDB();
 
-
 		$wikis = $dbr->newSelectQueryBuilder()
 			->select( 'wiki_dbname' )
 			->from( 'cw_wikis' )
